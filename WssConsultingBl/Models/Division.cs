@@ -26,5 +26,8 @@ public class Division
         DateTimeCreated = DateTime.Now;
         Department = department;
     }
-    
+    public Division(string name, Department department):this(Guid.NewGuid(), name, department)
+    {
+
+    }
 }

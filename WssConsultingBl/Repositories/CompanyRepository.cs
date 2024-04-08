@@ -1,15 +1,16 @@
 using WssСonsultingBl.Model;
+using WssСonsultingBl.Repositories.Interfaces;
+using WssСonsultingBl.Repository;
 
-namespace WssСonsultingBl.Repository;
+namespace WssСonsultingBl.Repositories;
 
-
-public class CompanyRepository : IRepository<Company>, IComponentChild<Department>
+public class CompanyRepository : IRepository<Company>, IComponentChildMoving<Department>
 {
     private readonly ApplicationContext _context;
 
     public CompanyRepository(ApplicationContext context)
     {
-        _context = context;
+        _context = context??throw new ArgumentNullException(nameof(context));
     }
     
     
@@ -43,7 +44,7 @@ public class CompanyRepository : IRepository<Company>, IComponentChild<Departmen
         throw new NotImplementedException();
     }
     
-    public IEnumerable<Department> GetAllChildren()
+    public Task<IEnumerable<Department>?> GetAllChildrenAsync(Guid idParent)
     {
         throw new NotImplementedException();
     }
@@ -53,12 +54,12 @@ public class CompanyRepository : IRepository<Company>, IComponentChild<Departmen
         throw new NotImplementedException();
     }
 
-    public void RemoveChild(Guid childId)
+    public Task RemoveChildAsync(Guid childId)
     {
         throw new NotImplementedException();
     }
 
-    public void MoveChild(Guid childId, Guid newParentId)
+    public Task MoveChildAsync(Guid childId, Guid newParentId)
     {
         throw new NotImplementedException();
     }

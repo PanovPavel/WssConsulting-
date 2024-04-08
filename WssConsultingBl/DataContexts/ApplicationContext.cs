@@ -8,12 +8,15 @@ namespace WssСonsultingBl;
 public class ApplicationContext : DbContext
 {
     public DbSet<Company> Companies { get; set; } 
+    public DbSet<Department> Departments { get; set; }
+    public DbSet<Division> Divisions { get; set; }
     
     public ApplicationContext()
     {
         Database.EnsureDeleted();
         Database.EnsureCreated();
     }
+    
     public ApplicationContext(DbContextOptions<ApplicationContext> options) : base(options)
     {
         Database.EnsureDeleted();

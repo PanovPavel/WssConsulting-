@@ -1,10 +1,16 @@
 using WssСonsultingBl.Model;
 
-namespace WssСonsultingBl.Repository;
+namespace WssConsultingClient.Controller;
 
-public class DivisionRepository : IRepository<Division>
+public class DivisionController : IControllerClient<Division>
 {
-    public Task<IEnumerable<Company>> GetAllAsync()
+    private readonly IHttpClientFactory _clientFactory;
+
+    public DivisionController(IHttpClientFactory clientFactory)
+    {
+        _clientFactory = clientFactory ?? throw new ArgumentNullException(nameof(clientFactory));
+    }
+    public Task<IEnumerable<Division>> GetAllAsync()
     {
         throw new NotImplementedException();
     }
@@ -19,17 +25,12 @@ public class DivisionRepository : IRepository<Division>
         throw new NotImplementedException();
     }
 
-    public Task UpdateAsync(Division t)
+    public Task UpdateAsync(Guid id, Division t)
     {
         throw new NotImplementedException();
     }
 
     public Task DeleteAsync(Guid id)
-    {
-        throw new NotImplementedException();
-    }
-
-    public Task<bool> IsExistsAsync(Guid id)
     {
         throw new NotImplementedException();
     }
