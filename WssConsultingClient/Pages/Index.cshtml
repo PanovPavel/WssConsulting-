@@ -1,0 +1,45 @@
+﻿@page
+@model WssConsultingClient.ViewModel.CompanyViewModel
+@{
+    ViewData["Title"] = "Главная страница";
+}
+
+<h1>Иерархический справочник подразделений</h1>
+
+@{
+    int companyIndex = 1;
+}
+@foreach (var company in Model.Companies)
+{
+    <h2>@companyIndex++. @company.NameCompany</h2>
+    <ul>
+        @{
+            int departmentIndex = 1;
+        }
+
+        @if (company.Departments != null)
+        {
+            foreach (var department in company.Departments.OrderBy(dep => dep.DateTimeCreated))
+            {
+                <li>@departmentIndex++. @department.NameDepartment</li>
+                <ul>
+                    @{
+                        int divisionIndex = 1;
+
+                        if (department.Divisions != null)
+                        {
+                            foreach (var division in department.Divisions.OrderBy(div => div.DateTimeCreated))
+                            {
+                                <li>@divisionIndex++. @division.NameDivision</li>
+                            }
+                        }
+                        divisionIndex = 1;
+                    }
+                </ul>
+                {
+                    departmentIndex = 1;
+                }
+            }
+        }
+    </ul>
+}
