@@ -1,7 +1,6 @@
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
-namespace WssСonsultingBl.Services;
+namespace WssConsultingApi.Services;
 
 public interface IXmlImport
 {

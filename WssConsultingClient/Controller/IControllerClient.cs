@@ -1,5 +1,3 @@
-using WssСonsultingBl.Model;
-
 namespace WssConsultingClient.Controller;
 
 public interface IControllerClient<T>
@@ -13,6 +11,7 @@ public interface IControllerClient<T>
     /// возврат List<T>
     /// </summary>
     Task<IEnumerable<T>> GetAllAsync();
+
     /// <summary>
     /// Создание клиента через фабрику _clientFactory.CreateClient();7
     /// Пулчение ответа от сервера await httpClient.GetAsync("api/");
@@ -22,6 +21,7 @@ public interface IControllerClient<T>
     /// возврат List<T>
     /// </summary>
     Task<T> GetByIdAsync(Guid id);
+
     /// <summary>
     /// JsonConvert.SerializeObject(T);
     /// httpClient.PutAsync($"api", new StringContent(json, Encoding.UTF8, "application/json"));
@@ -32,6 +32,7 @@ public interface IControllerClient<T>
     /// <param name="t"></param>
     /// <returns></returns>
     Task AddAsync(T t);
+
     /// <summary>
     /// JsonConvert.SerializeObject(T);
     /// httpClient.PutAsync($"api/{id}", new StringContent(json, Encoding.UTF8, "application/json"));
@@ -43,6 +44,7 @@ public interface IControllerClient<T>
     /// <param name="t"></param>
     /// <returns></returns>
     Task UpdateAsync(Guid id, T t);
+
     /// <summary>
     /// await httpClient.DeleteAsync($"api/{id}");
     /// if(response.EnsureSuccessStatusCode())else{

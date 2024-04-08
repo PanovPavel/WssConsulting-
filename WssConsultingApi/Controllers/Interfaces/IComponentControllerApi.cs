@@ -1,8 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
 
-namespace WssConsultingApi.Controllers;
+namespace WssConsultingApi.Controllers.Interfaces;
 
-public interface IComponentController<T>
+public interface IComponentControllerApi<T>
 {
     /// <summary>
     /// Проверка существует ли элемнт if (find == null){return NotFound();}

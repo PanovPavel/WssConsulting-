@@ -1,4 +1,4 @@
-namespace WssСonsultingBl.Repository;
+namespace WssСonsultingBl.Repositories.Interfaces;
 
 public interface IComponentChildMoving<T> : IComponent<T>
 {

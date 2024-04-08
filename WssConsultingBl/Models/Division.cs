@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace WssСonsultingBl.Model;
+namespace WssСonsultingBl.Models;
 
 public class Division
 {

@@ -1,8 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
 
-namespace WssConsultingApi.Controllers;
+namespace WssConsultingApi.Controllers.Interfaces;
 
-public interface IController<T>
+public interface IControllerApi<T>
 {
     /// <summary>
     /// Получение из репозитория _repository.GetAllAsync() списка объектов

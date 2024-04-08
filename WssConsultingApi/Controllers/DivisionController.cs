@@ -1,16 +1,17 @@
 using Microsoft.AspNetCore.Mvc;
-using WssСonsultingBl.Model;
+using WssConsultingApi.Controllers.Interfaces;
+using WssСonsultingBl.Models;
 using WssСonsultingBl.Repositories.Interfaces;
 
 namespace WssConsultingApi.Controllers;
 
 [ApiController]
 [Route("api/division")]
-public class DivisionController : IController<Division>
+public class DivisionControllerApi : IControllerApi<Division>
 {
     private readonly IRepository<Division> _divisionRepository;
     
-    public DivisionController(IRepository<Division> divisionRepository)
+    public DivisionControllerApi(IRepository<Division> divisionRepository)
     {
         _divisionRepository = divisionRepository??throw new ArgumentException("division");
     }

@@ -1,6 +1,6 @@
 using System.Collections.ObjectModel;
 using WssConsultingClient.Controller;
-using WssСonsultingBl.Model;
+using WssСonsultingBl.Models;
 
 namespace WssConsultingClient.ViewModel;
 

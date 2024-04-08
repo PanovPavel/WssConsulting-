@@ -1,4 +1,4 @@
-using WssСonsultingBl.Model;
+using WssСonsultingBl.Models;
 
 namespace WssConsultingClient.Controller;
 

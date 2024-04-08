@@ -1,8 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
 
-namespace WssConsultingApi.Controllers;
+namespace WssConsultingApi.Controllers.Interfaces;
 
-public interface IComponentChildMoving<T> : IComponentController<T>
+public interface IComponentChildMovingApi<T> : IComponentControllerApi<T>
 {
     /// <summary>
     /// _repository.MoveChildAsync(childId, newParentId);

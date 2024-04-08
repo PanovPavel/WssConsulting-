@@ -1,13 +1,13 @@
 using Microsoft.AspNetCore.Mvc;
-using WssСonsultingBl.Model;
+using WssConsultingApi.Controllers.Interfaces;
+using WssСonsultingBl.Models;
 using WssСonsultingBl.Repositories.Interfaces;
-using WssСonsultingBl.Repository;
 
 namespace WssConsultingApi.Controllers;
 
 [ApiController]
 [Route("api/company")]
-public class CompanyController : IController<Company>, IComponentChildMoving<Division>
+public class CompanyController : IControllerApi<Company>, IComponentChildMovingApi<Division>
 {
     private readonly IRepository<Company> _companyRepository;
 

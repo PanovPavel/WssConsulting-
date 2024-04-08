@@ -1,5 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
-using WssСonsultingBl.Services;
+using WssConsultingApi.Services;
 
 namespace WssConsultingApi.Controllers;
 

@@ -1,7 +1,8 @@
+using WssСonsultingBl.DataContexts;
+using WssСonsultingBl.Models;
 using WssСonsultingBl.Repositories.Interfaces;
-using WssСonsultingBl.Repository;
 
-namespace WssСonsultingBl.Model;
+namespace WssСonsultingBl.Repositories;
 
 public class DepartmentRepository : IRepository<Department>, IComponentChildMoving<Division>
 {

@@ -1,8 +1,6 @@
-using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
-using System.Runtime.CompilerServices;
 
-namespace WssСonsultingBl.Model;
+namespace WssСonsultingBl.Models;
 
 public class Company
 {

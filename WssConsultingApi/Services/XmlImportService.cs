@@ -1,8 +1,8 @@
 using System.Xml.Serialization;
 using Microsoft.AspNetCore.Mvc;
 using WssСonsultingBl;
-using WssСonsultingBl.Model;
-using WssСonsultingBl.Services;
+using WssСonsultingBl.DataContexts;
+using WssСonsultingBl.Models;
 
 namespace WssConsultingApi.Services;
 
@@ -38,7 +38,7 @@ public class XmlImportService : IXmlImport
                 }
                 await _applicationContext.SaveChangesAsync();
                 return new OkObjectResult("Data imported successfully");
-            };
+            }
             return new BadRequestObjectResult("Error format xml");
         }
     }

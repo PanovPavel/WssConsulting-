@@ -1,11 +1,10 @@
 using System.Configuration;
 using Microsoft.EntityFrameworkCore;
-using WssСonsultingBl.Model;
-using System.Configuration;
+using WssСonsultingBl.Models;
 
-namespace WssСonsultingBl;
+namespace WssСonsultingBl.DataContexts;
 
-public class ApplicationContext : DbContext
+public  class ApplicationContext : DbContext
 {
     public DbSet<Company> Companies { get; set; } 
     public DbSet<Department> Departments { get; set; }
@@ -13,13 +12,13 @@ public class ApplicationContext : DbContext
     
     public ApplicationContext()
     {
-        Database.EnsureDeleted();
+        //Database.EnsureDeleted();
         Database.EnsureCreated();
     }
     
     public ApplicationContext(DbContextOptions<ApplicationContext> options) : base(options)
     {
-        Database.EnsureDeleted();
+        //Database.EnsureDeleted();
         Database.EnsureCreated();
     }
 

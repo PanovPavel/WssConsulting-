@@ -1,10 +1,11 @@
 using System.Xml.Serialization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using WssConsultingApi.Services;
-using WssСonsultingBl.Model;
+using WssСonsultingBl;
+using WssСonsultingBl.DataContexts;
+using WssСonsultingBl.Models;
 
-namespace WssСonsultingBl.Services;
+namespace WssConsultingApi.Services;
 
 public class XmlExportService : IXmlExport
 {

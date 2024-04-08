@@ -1,7 +1,8 @@
-using WssСonsultingBl.Model;
+using WssСonsultingBl.DataContexts;
+using WssСonsultingBl.Models;
 using WssСonsultingBl.Repositories.Interfaces;
 
-namespace WssСonsultingBl.Repository;
+namespace WssСonsultingBl.Repositories;
 
 public class DivisionRepository : IRepository<Division>
 {

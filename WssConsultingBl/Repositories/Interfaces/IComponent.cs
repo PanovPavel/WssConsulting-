@@ -1,6 +1,4 @@
-using WssСonsultingBl.Model;
-
-namespace WssСonsultingBl.Repository;
+namespace WssСonsultingBl.Repositories.Interfaces;
 
 public interface IComponent<T>
 {
